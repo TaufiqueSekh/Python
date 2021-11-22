@@ -1,0 +1,19 @@
+n=int(input("Enter student number"))
+st=[]
+for i in range(n):
+  name=input("Enter name")
+  score=float(input("Enter marks"))
+  st.append([name,score])
+names=[]
+highest=0
+second_high=0
+for i in range(len(st)):
+  if st[i][1]>highest:
+    second_high=highest
+    highest=st[i][1]
+  elif st[i][1]>second_high:
+    second_high=st[i][1]
+for val in st:
+  if val[1]==second_high:
+    names.append(val[0])
+print(sorted(names))
