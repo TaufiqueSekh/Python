@@ -1,0 +1,4 @@
+students = [['Harry', 37.21], ['Berry', 37.21], ['Tina', 37.2], ['Akriti', 41], ['Harsh', 39]]
+scores=set(students[x][1] for x in range(len(students)))
+names=[x[0] for x in students if x[1]==sorted(scores)[1]]
+sorted(names)
